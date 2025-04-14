@@ -5,7 +5,7 @@
  * @param {Array} [values=[]] - The values to exclude.
  * @returns {Array} Returns the new array of filtered values.
  */
-export function difference(array = [], values = []) {
+export const difference = (array = [], values = []) => {
     const res = [];
 
     for (let i = 0; i < array.length; i++) {
@@ -16,4 +16,4 @@ export function difference(array = [], values = []) {
     }
 
     return res;
-}
+};

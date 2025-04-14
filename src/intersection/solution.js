@@ -1,11 +1,23 @@
-/** .........
- * Sum of two numbers.
+/**
+ * Creates an array of values that are in both the first and the second arrays.
  *
- * @param {number} num1 - The first number to sum.
- * @param {number} num2 - The second number to sum.
- * @returns {number} The sum of num1 and num2.
+ * Repeated values are not duplicated in the return value,
+ * and the order of result values is determined by the first array.
+ *
+ * @param {Array} [array=[]] - The array to inspect.
+ * @param {Array} [values=[]] - The values to include.
+ * @returns {Array} Returns the new array of filtered values.
  */
+export const intersection = (array = [], values = []) => {
+    const res = [];
 
-export const solutionName = (num1, num2) => {
-    return num1 + num2;
+    for (let i = 0; i < array.length; i++) {
+        const item = array[i];
+
+        if (values.indexOf(item) !== -1 && res.indexOf(item) === -1) {
+            res.push(item);
+        }
+    }
+
+    return res;
 };
