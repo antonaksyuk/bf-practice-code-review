@@ -11,7 +11,8 @@
     "vwell",
     "projec",
     "raddevon",
-    "sbor"
+    "sbor",
+    "difference"
   ],
   "ignorePaths": [
     "node_modules/**",
