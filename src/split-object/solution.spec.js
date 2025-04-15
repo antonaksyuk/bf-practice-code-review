@@ -24,11 +24,7 @@ describe('splitObject', () => {
 
     it('should handle null and undefined values ​​correctly', () => {
         const input = { a: null, b: undefined, c: 'value' };
-        const expected = [
-            { a: null },
-            { b: undefined },
-            { c: 'value' },
-        ];
+        const expected = [{ a: null }, { b: undefined }, { c: 'value' }];
         expect(splitObject(input)).toEqual(expected);
     });
 
@@ -47,12 +43,8 @@ describe('splitObject', () => {
     });
 
     it('must handle keys that are numbers (they are converted to strings)', () => {
-        const input = { 1: 'one', 2: 'two', '3': 'three' };
-        const expected = [
-            { '1': 'one' },
-            { '2': 'two' },
-            { '3': 'three' },
-        ];
+        const input = { 1: 'one', 2: 'two', 3: 'three' };
+        const expected = [{ 1: 'one' }, { 2: 'two' }, { 3: 'three' }];
         expect(splitObject(input)).toEqual(expected);
     });
 });
